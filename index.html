@@ -12,13 +12,13 @@
       }
       sessionStorage.setItem('cacheCleared', 'true');
       window.location.reload();
-      return true; // Đang reload, dừng thực thi tiếp onload
+      return true;
     }
     return false;
   }
 
   window.onload = function() {
-    if (clearCacheAndReload()) return; // Tránh chạy render trước khi trang reload xong
+    if (clearCacheAndReload()) return;
     renderGameGrid();
     renderGameDetails();
     setTimeout(() => {
@@ -30,12 +30,15 @@
     }, 1000);
   };
   </script> 
+
   <meta name="google-adsense-account" content="ca-pub-5837621758803699"> 
   <meta charset="UTF-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"> 
-  <meta name="description" content="SHAWDO MOD - Cung cấp hack game và key miễn phí cho Liên Quân, Free Fire, ZingSpeed và hơn thế nữa!"> 
-  <title>SHAWDO MOD - Hack Game & Key</title> 
+  <meta name="description" content="HOANGTHUC MOD - Cung cấp hack game và key miễn phí cho Liên Quân, Free Fire, ZingSpeed và hơn thế nữa!"> 
+  <title>HOANGTHUC MOD - Hack Game & Key</title> 
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+
   <style>
     * {
       box-sizing: border-box;
@@ -94,7 +97,6 @@
       padding: 0;
     }
     
-    /* Header SEO Brand */
     .header {
       text-align: center;
       margin-bottom: 32px;
@@ -143,6 +145,7 @@
       margin: 35px 0;
       position: relative;
     }
+
     .styled-separator::after {
       content: '⚡⚡⚡';
       position: absolute;
@@ -155,7 +158,6 @@
       font-size: 14px;
     }
 
-    /* CSS cho dải phân cách game */
     .game-separator {
       grid-column: 1 / -1;
       text-align: center;
@@ -200,13 +202,13 @@
       overflow: hidden;
     }
 
-    /* CSS cho ô trống để giữ cân bằng 2 cột */
     .game-card.empty-card {
       background: transparent !important;
       border: none !important;
       box-shadow: none !important;
       pointer-events: none !important;
     }
+
     .game-card.empty-card::before {
       display: none !important;
     }
@@ -351,7 +353,6 @@
       }
     }
 
-    /* CSS Tối ưu Ảnh Trượt */
     .slider-container {
       width: 100%;
       max-width: 320px;
@@ -439,6 +440,7 @@
       border: 1px solid #ff4757 !important;
       animation: pulse-red-btn 1.5s infinite !important;
     }
+
     @keyframes pulse-red-btn {
       0% { box-shadow: 0 0 10px rgba(239, 68, 68, 0.4); }
       50% { box-shadow: 0 0 25px rgba(239, 68, 68, 0.8); transform: scale(1.02); }
@@ -574,6 +576,7 @@
       animation: pulse-yellow 2s infinite;
       box-shadow: 0 0 15px rgba(245, 158, 11, 0.5) !important;
     }
+
     @keyframes pulse-yellow {
       0% { box-shadow: 0 0 10px rgba(245, 158, 11, 0.4); }
       50% { box-shadow: 0 0 25px rgba(245, 158, 11, 0.8); transform: scale(1.02); }
@@ -592,7 +595,6 @@
       box-shadow: 0 0 15px rgba(16, 185, 129, 0.5) !important;
     }
 
-    /* Popup Settings */
     .popup-overlay {
       position: fixed;
       top: 0;
@@ -644,16 +646,19 @@
       letter-spacing: 1.5px;
       text-shadow: 0 0 15px rgba(255, 71, 87, 0.6);
     }
+
     .popup-content p {
       color: var(--text-secondary);
       margin-bottom: 14px;
     }
+
     .popup-content .highlight-text {
       color: #f59e0b;
       font-size: 110%;
       text-transform: uppercase;
       text-shadow: 0 0 8px rgba(245,158,11,0.5);
     }
+
     .popup-content .highlight-link {
       display: inline-block;
       font-weight: 800;
@@ -664,12 +669,25 @@
       font-size: 13px;
       transition: all 0.3s;
     }
+
     .popup-content .highlight-link:hover {
       transform: scale(1.05);
     }
-    .popup-content .highlight-link.zalo { background: #0068ff; color: #fff; }
-    .popup-content .highlight-link.tele { background: #0088cc; color: #fff; }
-    .popup-content .highlight-link.discord { background: #5865F2; color: #fff; }
+
+    .popup-content .highlight-link.zalo {
+      background: #0068ff;
+      color: #fff;
+    }
+
+    .popup-content .highlight-link.tele {
+      background: #0088cc;
+      color: #fff;
+    }
+
+    .popup-content .highlight-link.discord {
+      background: #5865F2;
+      color: #fff;
+    }
     
     .popup-content .highlight-link.buy { 
       background: linear-gradient(135deg, #ef4444, #b91c1c); 
@@ -678,6 +696,7 @@
       box-shadow: 0 0 10px rgba(239, 68, 68, 0.6); 
       animation: pulse-red 1.5s infinite;
     }
+
     .popup-content .highlight-link.free { 
       background: linear-gradient(135deg, #10b981, #059669); 
       color: #fff; 
@@ -693,6 +712,7 @@
       text-transform: uppercase;
       animation: pulse-blue 1.5s infinite;
     }
+
     @keyframes pulse-blue {
       0% { box-shadow: 0 0 10px rgba(59, 130, 246, 0.5); }
       50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8); }
@@ -710,8 +730,15 @@
     }
     
     @keyframes slideUp {
-      from { opacity: 0; transform: translateY(20px) scale(0.95); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
+      from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
     
     .popup-content button {
@@ -756,14 +783,17 @@
       color: white;
       transition: transform 0.3s;
     }
+
     .floating-support:hover {
       transform: scale(1.05);
     }
+
     .floating-support svg {
       width: 22px;
       height: 22px;
       stroke: currentColor;
     }
+
     .support-text {
       font-weight: 800;
       font-size: 14px;
@@ -771,19 +801,28 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
+
     @keyframes pulse-support {
-      0% { box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.6); }
-      70% { box-shadow: 0 0 0 10px rgba(255, 71, 87, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(255, 71, 87, 0); }
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.6);
+      }
+
+      70% {
+        box-shadow: 0 0 0 10px rgba(255, 71, 87, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 71, 87, 0);
+      }
     }
     
-    /* Giao Diện Popup Mở Khóa Nhiệm Vụ */
     .task-content {
       width: 330px !important;
       padding: 20px !important;
       border: 2px solid #00ecff !important;
       box-shadow: 0 0 25px rgba(0, 236, 255, 0.4) !important;
     }
+
     .task-status {
       background: rgba(0,0,0,0.4);
       padding: 12px;
@@ -794,6 +833,7 @@
       font-size: 15px;
       border: 1px solid var(--border);
     }
+
     .task-btn {
       display: block;
       width: 100%;
@@ -807,10 +847,25 @@
       text-decoration: none;
       transition: transform 0.2s, box-shadow 0.2s;
     }
-    .task-btn:active { transform: scale(0.96); }
-    .task-btn.tele { background: linear-gradient(135deg, #0088cc, #00aaff); box-shadow: 0 0 10px rgba(0,136,204,0.4); }
-    .task-btn.discord { background: linear-gradient(135deg, #5865F2, #7289da); box-shadow: 0 0 10px rgba(88,101,242,0.4); }
-    .task-btn.zalo { background: linear-gradient(135deg, #0068ff, #3385ff); box-shadow: 0 0 10px rgba(0,104,255,0.4); }
+
+    .task-btn:active {
+      transform: scale(0.96);
+    }
+
+    .task-btn.tele {
+      background: linear-gradient(135deg, #0088cc, #00aaff);
+      box-shadow: 0 0 10px rgba(0,136,204,0.4);
+    }
+
+    .task-btn.discord {
+      background: linear-gradient(135deg, #5865F2, #7289da);
+      box-shadow: 0 0 10px rgba(88,101,242,0.4);
+    }
+
+    .task-btn.zalo {
+      background: linear-gradient(135deg, #0068ff, #3385ff);
+      box-shadow: 0 0 10px rgba(0,104,255,0.4);
+    }
     
     .unlock-btn-disabled {
       background: #475569 !important;
@@ -819,11 +874,13 @@
       box-shadow: none !important;
       max-width: 100% !important;
     }
+
     .unlock-btn-active {
       background: linear-gradient(135deg, #10b981, #059669) !important;
       animation: pulse-green 1.5s infinite !important;
       max-width: 100% !important;
     }
+
     .close-task-btn {
       background: transparent !important;
       border: 1px solid var(--border) !important;
@@ -832,6 +889,7 @@
       color: var(--text-secondary) !important;
       max-width: 100% !important;
     }
+
     .close-task-btn:hover {
       background: rgba(255,255,255,0.05) !important;
     }
@@ -842,27 +900,34 @@
         padding: 20px;
         font-size: 14px;
       }
+
       .popup-content h2.seo-title {
         font-size: 24px;
       }
+
       .popup-content button {
         font-size: 14px;
         padding: 10px 24px;
       }
+
       .floating-support {
         bottom: 12px;
         right: 12px;
         height: 38px;
         padding: 0 10px;
       }
+
       .floating-support svg {
         width: 18px;
         height: 18px;
       }
+
       .support-text {
         font-size: 12px;
       }
-      .btn-buy-key, .btn-free-acc {
+
+      .btn-buy-key,
+      .btn-free-acc {
         width: 100%;
         text-align: center;
       }
@@ -886,7 +951,6 @@
       background: var(--primary);
     }
 
-    /* CSS Mục Donet */
     .donet-special-section {
       text-align: center;
       margin: 40px 0;
@@ -955,15 +1019,24 @@
     }
     
     @media (max-width: 640px) {
-      .donet-title { font-size: 22px; }
-      .donet-desc { font-size: 14px; }
-      .btn-donet { font-size: 18px; padding: 14px 35px; }
+      .donet-title {
+        font-size: 22px;
+      }
+
+      .donet-desc {
+        font-size: 14px;
+      }
+
+      .btn-donet {
+        font-size: 18px;
+        padding: 14px 35px;
+      }
     }
   </style> 
  </head> 
+
  <body> 
 
-  <!-- Thêm thẻ Audio tự động phát nhạc và lặp lại khi hết -->
   <audio id="bg-music" src="Anhac1.mp3" autoplay loop></audio>
 
   <a href="https://www.facebook.com/share/p/1BPy5cTRNL/" target="_blank" class="floating-support" title="Hỗ trợ 24/7">
@@ -976,25 +1049,55 @@
 
   <div id="popup" class="popup-overlay"> 
    <div class="popup-content"> 
-    <h2 class="seo-title">ShaWdo Mod</h2> 
-    <p>Chọn game bạn muốn hack để <b class="highlight-text">Tải</b> và nhận <b class="highlight-text">Key</b></p>
-    <p>- Tham gia các nhóm thông báo update bản Hack mới nhất: 
-        <a href="https://zalo.me/g/tuokpp354" target="_blank" class="highlight-link zalo">Zalo</a>, 
-        <a href="https://t.me/ShawDoModdd" target="_blank" class="highlight-link tele">Telegram</a>, 
-        <a href="https://discord.gg/9va5CnaFm" target="_blank" class="highlight-link discord">Discord</a>.....
+    <h2 class="seo-title">HOANGTHUC MOD</h2> 
+
+    <p>
+      Chọn game bạn muốn hack để 
+      <b class="highlight-text">Tải</b> và nhận 
+      <b class="highlight-text">Key</b>
     </p>
-    <p>Shop Bán key giá chỉ 10k siêu rẻ cho anh em <a href="buy.php" target="_blank" class="highlight-link buy">Mua key ngay</a></p>
-    <p>Shop nhận <a href="https://ramdommienphi.site" target="_blank" class="highlight-link free">Acc miễn phí</a></p>
-    <p>- Liên hệ hỗ trợ <b class="highlight-text" style="color: #ef4444; font-size: 110%;">24/7</b> <a href="https://www.facebook.com/share/p/1BPy5cTRNL/" target="_blank" class="highlight-link support-btn">Tại đây</a></p>
-    <p class="wish-text">- ShaWdo Mod Chúc bạn có ngày chơi game tốt đẹp</p>
+
+    <p>
+      - Tham gia các nhóm thông báo update bản Hack mới nhất: 
+      <a href="https://zalo.me/g/tuokpp354" target="_blank" class="highlight-link zalo">Zalo</a>, 
+      <a href="https://t.me/ShawDoModdd" target="_blank" class="highlight-link tele">Telegram</a>, 
+      <a href="https://discord.gg/9va5CnaFm" target="_blank" class="highlight-link discord">Discord</a>.....
+    </p>
+
+    <p>
+      Shop Bán key giá chỉ 10k siêu rẻ cho anh em 
+      <a href="buy.php" target="_blank" class="highlight-link buy">Mua key ngay</a>
+    </p>
+
+    <p>
+      Shop nhận 
+      <a href="https://ramdommienphi.site" target="_blank" class="highlight-link free">Acc miễn phí</a>
+    </p>
+
+    <p>
+      - Liên hệ hỗ trợ 
+      <b class="highlight-text" style="color: #ef4444; font-size: 110%;">24/7</b> 
+      <a href="https://www.facebook.com/share/p/1BPy5cTRNL/" target="_blank" class="highlight-link support-btn">Tại đây</a>
+    </p>
+
+    <p class="wish-text">
+      - HOANGTHUC MOD Chúc bạn có ngày chơi game tốt đẹp
+    </p>
+
     <button onclick="closePopup()">Đã Hiểu</button> 
    </div> 
   </div> 
 
   <div id="task-popup" class="popup-overlay">
     <div class="popup-content task-content">
-      <h2 class="seo-title" style="font-size: 22px; color: #00ecff; text-shadow: 0 0 15px rgba(0,236,255,0.5);">MỞ KHÓA LINK TẢI</h2>
-      <p style="text-align: center; font-size: 14px; margin-bottom: 20px;">Vui lòng hoàn thành các bước bên dưới để hiện link tải bản Hack cập nhật mới nhất.</p>
+
+      <h2 class="seo-title" style="font-size: 22px; color: #00ecff; text-shadow: 0 0 15px rgba(0,236,255,0.5);">
+        MỞ KHÓA LINK TẢI
+      </h2>
+
+      <p style="text-align: center; font-size: 14px; margin-bottom: 20px;">
+        Vui lòng hoàn thành các bước bên dưới để hiện link tải bản Hack cập nhật mới nhất.
+      </p>
       
       <div class="task-status">
         <span id="task-count" style="color: #ef4444;">🔒 Đã Khóa (0/1)</span>
@@ -1006,18 +1109,32 @@
         </a>
       </div>
 
-      <button id="unlock-btn" class="unlock-btn-disabled" disabled onclick="downloadFile()">Mở Khóa Link Tải</button>
-      <button class="close-task-btn" onclick="closeTaskPopup()">Hủy</button>
+      <button id="unlock-btn" class="unlock-btn-disabled" disabled onclick="downloadFile()">
+        Mở Khóa Link Tải
+      </button>
+
+      <button class="close-task-btn" onclick="closeTaskPopup()">
+        Hủy
+      </button>
     </div>
   </div>
 
   <div class="container"> 
+
    <div class="header"> 
-    <h1><span class="brand-seo">SHAWDO MOD</span> - Hack Game</h1> 
-    <p class="header-subtitle">Hệ thống phân phối Hack Game Mobile số 1 hiện nay</p> 
+    <h1>
+      <span class="brand-seo">HOANGTHUC MOD</span> - Hack Game
+    </h1> 
+
+    <p class="header-subtitle">
+      Hệ thống phân phối Hack Game Mobile số 1 hiện nay
+    </p>
    </div> 
 
-   <div class="section-title-key">CHỌN Ô MÀ GAME BẠN MUỐN MOD</div>
+   <div class="section-title-key">
+     CHỌN Ô MÀ GAME BẠN MUỐN MOD
+   </div>
+
    <div class="game-grid" id="game-grid"></div> 
 
    <div id="game-details"></div> 
@@ -1025,30 +1142,66 @@
    <hr class="styled-separator">
 
    <div class="links-section"> 
-    <h2 class="seo-title-links">🛒 MUA KEY VÀ SHOP ACC MIỄN PHÍ</h2> 
+
+    <h2 class="seo-title-links">
+      🛒 MUA KEY VÀ SHOP ACC MIỄN PHÍ
+    </h2> 
+
     <div class="links-container" style="gap: 16px;"> 
-     <a href="buy.php" target="_blank" class="btn-buy-key" style="font-size: 16px !important; padding: 14px 26px !important;">Mua Key Giá Rẻ</a> 
-     <a href="https://ramdommienphi.site" target="_blank" class="btn-free-acc">Nhận Acc Miễn Phí</a> 
+
+      <a href="buy.php" target="_blank" class="btn-buy-key" style="font-size: 16px !important; padding: 14px 26px !important;">
+        Mua Key Giá Rẻ
+      </a> 
+
+      <a href="https://ramdommienphi.site" target="_blank" class="btn-free-acc">
+        Nhận Acc Miễn Phí
+      </a> 
+
     </div> 
    </div> 
    
    <div class="links-section"> 
+
     <h2>🌐 Cộng Đồng</h2> 
+
     <div class="links-container"> 
-     <a href="https://www.youtube.com/@shawdomod" target="_blank">YouTube</a> 
-     <a href="https://zalo.me/g/tuokpp354" target="_blank">Box Zalo</a> 
-     <a href="https://t.me/ShawDoModdd" target="_blank">Telegram</a> 
-     <a href="https://discord.gg/9va5CnaFm" target="_blank">Discord</a> 
+
+      <a href="https://www.youtube.com/@shawdomod" target="_blank">
+        YouTube
+      </a> 
+
+      <a href="https://zalo.me/g/tuokpp354" target="_blank">
+        Box Zalo
+      </a> 
+
+      <a href="https://t.me/ShawDoModdd" target="_blank">
+        Telegram
+      </a> 
+
+      <a href="https://discord.gg/9va5CnaFm" target="_blank">
+        Discord
+      </a> 
+
     </div> 
    </div> 
 
    <div class="donet-special-section">
-      <div class="donet-title">💖 DONET CHO TEAM SDM 💖</div>
-      <div class="donet-desc">Sự ủng hộ của bạn là động lực to lớn giúp Team phát triển thêm nhiều bản Hack xịn xò hơn!</div>
-      <a href="donet.php" class="btn-donet">DONET NGAY</a>
+
+      <div class="donet-title">
+        💖 DONET CHO TEAM HOANGTHUC 💖
+      </div>
+
+      <div class="donet-desc">
+        Sự ủng hộ của bạn là động lực to lớn giúp Team phát triển thêm nhiều bản Hack xịn xò hơn!
+      </div>
+
+      <a href="donet.php" class="btn-donet">
+        DONET NGAY
+      </a>
+
    </div>
 
-  </div> <!-- End container -->
+  </div>
 
   <script>
     const games = [
@@ -1056,7 +1209,7 @@
         isSeparator: true,
         text: "LIÊN QUÂN MAP FREE"
       },
-      // 1. LIÊN QUÂN ANDROID 1
+
       {
         id: 'lqv2',
         name: 'CHẤP TỐ TÁCH GỐC <span style="color: #00ecff; font-weight: 800;">ANDROID</span>',
@@ -1067,9 +1220,23 @@
             description: 'Tải các tệp cần thiết bên dưới:',
             sliderImages: ['lqv2.png', 'lqv3.png'],
             links: [
-              { text: 'Tải Bản Tách Gốc', url: 'https://www.mediafire.com/file/wzm0whckk1sq01q/LQ_MOD_TACH_1.63.1.14+FIX+VĂNG.apk/file', isDownload: true },
-              { text: 'Get Key', url: 'getkey.php', customClass: 'btn-get-key', isDownload: false },
-              { text: 'Mua key', url: 'https://shawdomod.top/bankey/', customClass: 'btn-buy-key', isDownload: false }
+              {
+                text: 'Tải Bản Tách Gốc',
+                url: 'https://www.mediafire.com/file/wzm0whckk1sq01q/LQ_MOD_TACH_1.63.1.14+FIX+VĂNG.apk/file',
+                isDownload: true
+              },
+              {
+                text: 'Get Key',
+                url: 'getkey.php',
+                customClass: 'btn-get-key',
+                isDownload: false
+              },
+              {
+                text: 'Mua key',
+                url: 'https://shawdomod.top/bankey/',
+                customClass: 'btn-buy-key',
+                isDownload: false
+              }
             ],
             footerHtml: `
               <div style="font-size: 13px; color: var(--text-secondary); margin-top: 16px; padding: 12px; background: rgba(0,0,0,0.25); border-radius: 8px; border-left: 3px solid #f59e0b; line-height: 1.6; text-align: left;">
@@ -1081,7 +1248,7 @@
           }
         ]
       },
-      // 2. LIÊN QUÂN ANDROID 2
+
       {
         id: 'lqmap',
         name: 'Chấp Tố Gốc Liên Quân <span style="color: #00ecff; font-weight: 800;">ANDROID</span>',
@@ -1092,9 +1259,23 @@
             description: 'Tải các tệp cần thiết bên dưới:',
             sliderImages: ['vip1.png', 'vip2.png', 'vip3.png', 'vip4.png', 'vip5.png', 'vip6.png'],
             links: [
-              { text: 'Tải Bản Gốc', url: 'https://www.mediafire.com/file/ipz1c0ts2mcxabg/LQ_MOD_1.63.1.14_FIX+VĂNG.apk/file', isDownload: true },
-              { text: 'Get Key', url: 'getkey.php', customClass: 'btn-get-key', isDownload: false },
-              { text: 'Mua key', url: 'https://shawdomod.top/bankey/', customClass: 'btn-buy-key', isDownload: false }
+              {
+                text: 'Tải Bản Gốc',
+                url: 'https://www.mediafire.com/file/ipz1c0ts2mcxabg/LQ_MOD_1.63.1.14_FIX+VĂNG.apk/file',
+                isDownload: true
+              },
+              {
+                text: 'Get Key',
+                url: 'getkey.php',
+                customClass: 'btn-get-key',
+                isDownload: false
+              },
+              {
+                text: 'Mua key',
+                url: 'https://shawdomod.top/bankey/',
+                customClass: 'btn-buy-key',
+                isDownload: false
+              }
             ],
             footerHtml: `
               <div style="font-size: 13px; color: var(--text-secondary); margin-top: 16px; padding: 12px; background: rgba(0,0,0,0.25); border-radius: 8px; border-left: 3px solid #f59e0b; line-height: 1.6; text-align: left;">
@@ -1106,7 +1287,7 @@
           }
         ]
       },
-      // 3. MỤC MAP IOS VIP PRO (CẬP NHẬT LINK TẢI VÀ GET KEY MỚI)
+
       {
         id: 'lqios',
         name: 'MAP IOS VIP PRO <span style="color: #00ecff; font-weight: 800;">IOS</span>',
@@ -1117,13 +1298,22 @@
             description: 'Tải tệp cần thiết bên dưới:',
             sliderImages: ['Iopro.png'],
             links: [
-              { text: 'TẢI NGAY (IOS)', url: 'https://storeipa.com/ZHduf3', isDownload: true },
-              { text: 'Get Key', url: 'https://ctv.ppapikey.xyz/get-api-link?tokenID=137&package_id=478&username=hellophuc', customClass: 'btn-get-key', isDownload: false }
+              {
+                text: 'TẢI NGAY (IOS)',
+                url: 'https://storeipa.com/ZHduf3',
+                isDownload: true
+              },
+              {
+                text: 'Get Key',
+                url: 'https://ctv.ppapikey.xyz/get-api-link?tokenID=137&package_id=478&username=hellophuc',
+                customClass: 'btn-get-key',
+                isDownload: false
+              }
             ]
           }
         ]
       },
-      // 4. MỤC IOS BẢN CHẤP TỐ VIP
+
       {
         id: 'ioschapto',
         name: 'IOS BẢN CHẤP TỐ <span style="position: absolute; top: 4px; right: -4px; background: #ef4444; color: white; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 800; box-shadow: 0 0 10px rgba(239, 68, 68, 0.8); z-index: 10; animation: pulse-red-btn 1.5s infinite;">VIP</span>',
@@ -1134,18 +1324,25 @@
             description: 'Tải các tệp cần thiết bên dưới:',
             sliderImages: ['Chaptoios.png'],
             links: [
-              { text: '🛒 MUA NGAY', url: 'buy.php', customClass: 'btn-buy-key', isDownload: false }
+              {
+                text: '🛒 MUA NGAY',
+                url: 'buy.php',
+                customClass: 'btn-buy-key',
+                isDownload: false
+              }
             ],
             footerHtml: `
               <div style="font-size: 14px; color: var(--text-primary); margin-top: 16px; padding: 12px; background: rgba(0,0,0,0.3); border-radius: 8px; border: 1px solid #f59e0b; text-align: center; box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);">
-                <strong style="color: #fff;">MUA KEY XONG LIÊN HỆ AD HƯỚNG DẪN TẢI</strong> <br>
-                <a href="https://zalo.me/g/tuokpp354" target="_blank" style="color: #00ecff; font-weight: 900; text-transform: uppercase; font-size: 18px; display: inline-block; margin-top: 8px; text-decoration: none; text-shadow: 0 0 8px rgba(0,236,255,0.8);">👉 TẠI ĐÂY 👈</a>
+                <strong style="color: #fff;">MUA KEY XONG LIÊN HỆ AD HƯỚNG DẪN TẢI</strong><br>
+                <a href="https://zalo.me/g/tuokpp354" target="_blank" style="color: #00ecff; font-weight: 900; text-transform: uppercase; font-size: 18px; display: inline-block; margin-top: 8px; text-decoration: none; text-shadow: 0 0 8px rgba(0,236,255,0.8);">
+                  👉 TẠI ĐÂY 👈
+                </a>
               </div>
             `
           }
         ]
       },
-      // 4.5 ZINGSPEED MOBILE
+
       {
         id: 'zingspeed',
         name: 'ZingSpeed Mobile <span style="position: absolute; top: 4px; right: -4px; background: #ef4444; color: white; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 800; box-shadow: 0 0 10px rgba(239, 68, 68, 0.8); z-index: 10; animation: pulse-red-btn 1.5s infinite;">NEW</span>',
@@ -1156,9 +1353,23 @@
             description: 'Tải các tệp cần thiết bên dưới:',
             sliderImages: ['Z0.png'],
             links: [
-              { text: 'Tải Về', url: 'https://www.mediafire.com/file/q4lalna402txjh3/APK_ZSM_1.54.0.x_Fix.apk/file', isDownload: true },
-              { text: 'Get Key', url: 'getkey.php', customClass: 'btn-get-key', isDownload: false },
-              { text: 'Mua key', url: 'https://shawdomod.top/bankey/', customClass: 'btn-buy-key', isDownload: false }
+              {
+                text: 'Tải Về',
+                url: 'https://www.mediafire.com/file/q4lalna402txjh3/APK_ZSM_1.54.0.x_Fix.apk/file',
+                isDownload: true
+              },
+              {
+                text: 'Get Key',
+                url: 'getkey.php',
+                customClass: 'btn-get-key',
+                isDownload: false
+              },
+              {
+                text: 'Mua key',
+                url: 'https://shawdomod.top/bankey/',
+                customClass: 'btn-buy-key',
+                isDownload: false
+              }
             ],
             footerHtml: `
               <div style="font-size: 13px; color: var(--text-secondary); margin-top: 16px; padding: 12px; background: rgba(0,0,0,0.25); border-radius: 8px; border-left: 3px solid #00ecff; line-height: 1.6; text-align: left;">
@@ -1169,7 +1380,7 @@
           }
         ]
       },
-      // 4.6 8 BALL POOL
+
       {
         id: '8ballpool',
         name: '8 BALL POOL <span style="position: absolute; top: 4px; right: -4px; background: #ef4444; color: white; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 800; box-shadow: 0 0 10px rgba(239, 68, 68, 0.8); z-index: 10; animation: pulse-red-btn 1.5s infinite;">NEW</span>',
@@ -1180,14 +1391,28 @@
             description: 'Tải các tệp cần thiết bên dưới:',
             sliderImages: ['8p.png'],
             links: [
-              { text: 'Tải Về', url: 'https://zufile.com/download/SfLHz12FZs', isDownload: true },
-              { text: 'Get Key', url: 'getkey.php', customClass: 'btn-get-key', isDownload: false },
-              { text: 'Mua key', url: 'buy.php', customClass: 'btn-buy-key', isDownload: false }
+              {
+                text: 'Tải Về',
+                url: 'https://zufile.com/download/SfLHz12FZs',
+                isDownload: true
+              },
+              {
+                text: 'Get Key',
+                url: 'getkey.php',
+                customClass: 'btn-get-key',
+                isDownload: false
+              },
+              {
+                text: 'Mua key',
+                url: 'buy.php',
+                customClass: 'btn-buy-key',
+                isDownload: false
+              }
             ]
           }
         ]
       },
-      // 4.7 FC MOBILE
+
       {
         id: 'fcmobile',
         name: 'FC MOBILE <span style="position: absolute; top: 4px; right: -4px; background: #ef4444; color: white; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 800; box-shadow: 0 0 10px rgba(239, 68, 68, 0.8); z-index: 10; animation: pulse-red-btn 1.5s infinite;">NEW</span>',
@@ -1198,13 +1423,22 @@
             description: 'Tải các tệp cần thiết bên dưới:',
             sliderImages: ['Fc.png'],
             links: [
-              { text: 'Tải Về', url: 'https://zufile.com/download/rLiDKLdLtb', isDownload: true },
-              { text: 'Get Key', url: 'getkey.php', customClass: 'btn-get-key', isDownload: false }
+              {
+                text: 'Tải Về',
+                url: 'https://zufile.com/download/rLiDKLdLtb',
+                isDownload: true
+              },
+              {
+                text: 'Get Key',
+                url: 'getkey.php',
+                customClass: 'btn-get-key',
+                isDownload: false
+              }
             ]
           }
         ]
       },
-      // 4.8 BUBG
+
       {
         id: 'bubg',
         name: 'BUBG <span style="position: absolute; top: 4px; right: -4px; background: #ef4444; color: white; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 800; box-shadow: 0 0 10px rgba(239, 68, 68, 0.8); z-index: 10; animation: pulse-red-btn 1.5s infinite;">NEW</span>',
@@ -1215,31 +1449,58 @@
             description: 'Tải các tệp cần thiết bên dưới:',
             sliderImages: ['Bubg.png'],
             links: [
-              { text: 'Tải Về', url: 'https://www.mediafire.com/file/s4jn0m4uok6lxlc/pubg.apk/file', isDownload: true },
-              { text: 'Get Key', url: 'getkey.php', customClass: 'btn-get-key', isDownload: false }
+              {
+                text: 'Tải Về',
+                url: 'https://www.mediafire.com/file/s4jn0m4uok6lxlc/pubg.apk/file',
+                isDownload: true
+              },
+              {
+                text: 'Get Key',
+                url: 'getkey.php',
+                customClass: 'btn-get-key',
+                isDownload: false
+              }
             ]
           }
         ]
       },
+
       {
         isSeparator: true,
         text: "━━━━━━━━━━━━━━━\nFREE FIRE"
       },
-      // CÁC MỤC FREE FIRE (ĐÃ LỌC VÀ THÊM THEO YÊU CẦU: SHAWDO VIP V1, V2, SUNNY VIP, VN CHEAT V18)
+
       {
         id: 'shawdov1',
-        name: 'MENU SHAWDO VIP V1 ( no root ) <span style="position: absolute; top: 4px; right: -4px; background: #ef4444; color: white; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 800; box-shadow: 0 0 10px rgba(239, 68, 68, 0.8); z-index: 10; animation: pulse-red-btn 1.5s infinite;">VIP</span>',
+        name: 'MENU HOANGTHUC VIP V1 ( no root ) <span style="position: absolute; top: 4px; right: -4px; background: #ef4444; color: white; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 800; box-shadow: 0 0 10px rgba(239, 68, 68, 0.8); z-index: 10; animation: pulse-red-btn 1.5s infinite;">VIP</span>',
         icon: 'Lx.png',
         sections: [
           {
-            title: 'MENU SHAWDO VIP V1 ( no root )',
+            title: 'MENU HOANGTHUC VIP V1 ( no root )',
             description: 'Tải các tệp cần thiết bên dưới:',
             sliderImages: ['Lx.png'],
             links: [
-              { text: 'Tải Menu', url: 'https://www.mediafire.com/file/s8iomqabonfipuw/Multi_Cloner__sign_%25281%2529.apk/file', isDownload: true },
-              { text: 'Tải VPN', url: 'https://www.mediafire.com/file/5s8593q3gkdbdpx/BYPASS_VPN_6.1.4.apk/file', isDownload: true },
-              { text: 'Tải OB FF FIX VĂNG', url: 'https://www.mediafire.com/file/ea93lt88n9vmyy3/Free_Fire_MAX_2.127.1%25282%2529.apks/file', isDownload: true },
-              { text: 'Get Key', url: 'getkey.php', customClass: 'btn-get-key', isDownload: false }
+              {
+                text: 'Tải Menu',
+                url: 'https://www.mediafire.com/file/s8iomqabonfipuw/Multi_Cloner__sign_%25281%2529.apk/file',
+                isDownload: true
+              },
+              {
+                text: 'Tải VPN',
+                url: 'https://www.mediafire.com/file/5s8593q3gkdbdpx/BYPASS_VPN_6.1.4.apk/file',
+                isDownload: true
+              },
+              {
+                text: 'Tải OB FF FIX VĂNG',
+                url: 'https://www.mediafire.com/file/ea93lt88n9vmyy3/Free_Fire_MAX_2.127.1%25282%2529.apks/file',
+                isDownload: true
+              },
+              {
+                text: 'Get Key',
+                url: 'getkey.php',
+                customClass: 'btn-get-key',
+                isDownload: false
+              }
             ],
             footerHtml: `
               <div style="font-size: 13px; color: var(--text-secondary); margin-top: 16px; padding: 12px; background: rgba(0,0,0,0.25); border-radius: 8px; border-left: 3px solid #f59e0b; line-height: 1.6; text-align: left;">
@@ -1250,18 +1511,28 @@
           }
         ]
       },
+
       {
         id: 'shawdov2',
-        name: 'MENU SHAWDO VIP V2 ( ROOT) <span style="position: absolute; top: 4px; right: -4px; background: #ef4444; color: white; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 800; box-shadow: 0 0 10px rgba(239, 68, 68, 0.8); z-index: 10; animation: pulse-red-btn 1.5s infinite;">VIP</span>',
+        name: 'MENU HOANGTHUC VIP V2 ( ROOT) <span style="position: absolute; top: 4px; right: -4px; background: #ef4444; color: white; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 800; box-shadow: 0 0 10px rgba(239, 68, 68, 0.8); z-index: 10; animation: pulse-red-btn 1.5s infinite;">VIP</span>',
         icon: 'Lx.png',
         sections: [
           {
-            title: 'MENU SHAWDO VIP V2 ( ROOT)',
+            title: 'MENU HOANGTHUC VIP V2 ( ROOT)',
             description: 'Tải các tệp cần thiết bên dưới:',
             sliderImages: ['Lx.png'],
             links: [
-              { text: 'Tải ngay', url: 'https://www.mediafire.com/file/4m0vx2xurdk94kx/LiMod_%2528Root%25282%2529.zip/file', isDownload: true },
-              { text: 'Get Key', url: 'getkey.php', customClass: 'btn-get-key', isDownload: false }
+              {
+                text: 'Tải ngay',
+                url: 'https://www.mediafire.com/file/4m0vx2xurdk94kx/LiMod_%2528Root%25282%2529.zip/file',
+                isDownload: true
+              },
+              {
+                text: 'Get Key',
+                url: 'getkey.php',
+                customClass: 'btn-get-key',
+                isDownload: false
+              }
             ],
             footerHtml: `
               <div style="font-size: 13px; color: var(--text-secondary); margin-top: 16px; padding: 12px; background: rgba(0,0,0,0.25); border-radius: 8px; border-left: 3px solid #00ecff; line-height: 1.6; text-align: left;">
@@ -1273,6 +1544,7 @@
           }
         ]
       },
+
       {
         id: 'sunnyvip',
         name: 'SUNNY VIP <span style="position: absolute; top: 4px; right: -4px; background: #ef4444; color: white; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 800; box-shadow: 0 0 10px rgba(239, 68, 68, 0.8); z-index: 10; animation: pulse-red-btn 1.5s infinite;">VIP</span>',
@@ -1283,12 +1555,37 @@
             description: '<strong style="color: #00ecff; font-size: 16px; text-transform: uppercase;">TẢI MENU MULTI SUNNY</strong>',
             sliderImages: ['Sun.png'],
             links: [
-              { text: '⬇️ Bản 1 10.1', url: 'https://zufile.com/download/nJH84OTkCJ', isDownload: true },
-              { text: '⬇️ Bản 2 10.2', url: 'https://zufile.com/download/08ITntN8Ge', isDownload: true },
-              { text: '⬇️ Bản 3 10.3', url: 'https://zufile.com/download/hnXdvOHJDN', isDownload: true },
-              { text: '⬇️ Bản 4 10.4', url: 'https://zufile.com/download/OhzeSo9hBp', isDownload: true },
-              { text: 'TẢI OB FF ( BẮT BUỘC )', url: 'https://zufile.com/download/2owSbWzHvU8', isDownload: true },
-              { text: 'GET KEY', url: 'getkey.php', customClass: 'btn-get-key', isDownload: false }
+              {
+                text: '⬇️ Bản 1 10.1',
+                url: 'https://zufile.com/download/nJH84OTkCJ',
+                isDownload: true
+              },
+              {
+                text: '⬇️ Bản 2 10.2',
+                url: 'https://zufile.com/download/08ITntN8Ge',
+                isDownload: true
+              },
+              {
+                text: '⬇️ Bản 3 10.3',
+                url: 'https://zufile.com/download/hnXdvOHJDN',
+                isDownload: true
+              },
+              {
+                text: '⬇️ Bản 4 10.4',
+                url: 'https://zufile.com/download/OhzeSo9hBp',
+                isDownload: true
+              },
+              {
+                text: 'TẢI OB FF ( BẮT BUỘC )',
+                url: 'https://zufile.com/download/2owSbWzHvU8',
+                isDownload: true
+              },
+              {
+                text: 'GET KEY',
+                url: 'getkey.php',
+                customClass: 'btn-get-key',
+                isDownload: false
+              }
             ],
             footerHtml: `
               <div style="font-size: 13px; color: var(--text-secondary); margin-top: 16px; padding: 12px; background: rgba(0,0,0,0.25); border-radius: 8px; border-left: 3px solid #ef4444; line-height: 1.6; text-align: left;">
@@ -1301,7 +1598,7 @@
           }
         ]
       },
-      // MỤC MỚI THÊM: VN CHEAT V18
+
       {
         id: 'vncheatv18',
         name: 'VN CHEAT V18 <span style="position: absolute; top: 4px; right: -4px; background: #ef4444; color: white; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 800; box-shadow: 0 0 10px rgba(239, 68, 68, 0.8); z-index: 10; animation: pulse-red-btn 1.5s infinite;">NEW</span>',
@@ -1312,9 +1609,22 @@
             description: 'Tải các tệp cần thiết bên dưới:',
             sliderImages: ['Y18.png'],
             links: [
-              { text: 'Tải MENU V18', url: 'https://zufile.com/download/86LggKeFlI', isDownload: true },
-              { text: 'OB FF ( BẮT BUỘC CÀY ĐỂ CHẠY MENU )', url: 'https://zufile.com/download/1aDEr4TnA0', isDownload: true },
-              { text: 'Get Key', url: 'getkey.php', customClass: 'btn-get-key', isDownload: false }
+              {
+                text: 'Tải MENU V18',
+                url: 'https://zufile.com/download/86LggKeFlI',
+                isDownload: true
+              },
+              {
+                text: 'OB FF ( BẮT BUỘC CÀY ĐỂ CHẠY MENU )',
+                url: 'https://zufile.com/download/1aDEr4TnA0',
+                isDownload: true
+              },
+              {
+                text: 'Get Key',
+                url: 'getkey.php',
+                customClass: 'btn-get-key',
+                isDownload: false
+              }
             ],
             footerHtml: `
               <div style="font-size: 13px; color: var(--text-secondary); margin-top: 16px; padding: 12px; background: rgba(0,0,0,0.25); border-radius: 8px; border-left: 3px solid #00ecff; line-height: 1.6; text-align: left;">
@@ -1332,7 +1642,9 @@
     function renderGameGrid() {
       const grid = document.getElementById('game-grid');
       grid.innerHTML = ''; 
+
       games.forEach((game) => {
+
         if (game.isSeparator) {
           const sep = document.createElement('div');
           sep.className = 'game-separator';
@@ -1341,7 +1653,6 @@
           return;
         }
 
-        // Nếu là ô trống giữ chỗ
         if (game.isEmpty) {
           const card = document.createElement('div');
           card.className = 'game-card empty-card';
@@ -1352,10 +1663,19 @@
         const card = document.createElement('div');
         card.className = 'game-card';
         card.dataset.gameId = game.id;
+
         card.innerHTML = `
-          <img src="${game.icon}" alt="Biểu tượng ${game.name.replace(/<[^>]*>?/gm, '')}" loading="lazy" decoding="async" onerror="this.src='https://via.placeholder.com/120x80?text=Game'" />
+          <img 
+            src="${game.icon}" 
+            alt="Biểu tượng ${game.name.replace(/<[^>]*>?/gm, '')}" 
+            loading="lazy" 
+            decoding="async" 
+            onerror="this.src='https://via.placeholder.com/120x80?text=Game'" 
+          />
+
           <span>${game.name}</span>
         `;
+
         card.onclick = () => toggleGame(game.id, card);
         grid.appendChild(card);
       });
@@ -1371,20 +1691,31 @@
       sliderIntervals = [];
       
       games.forEach(game => {
-        if (game.isEmpty || game.isSeparator) return; // Bỏ qua ô trống hoặc phân cách
+
+        if (game.isEmpty || game.isSeparator) return;
 
         const detail = document.createElement('div');
         detail.id = `details-${game.id}`;
         detail.className = 'game-details';
+
         let sectionsHTML = '';
+
         game.sections.forEach((section, index) => {
+
           let sliderHTML = '';
+
           if (section.sliderImages && section.sliderImages.length > 0) {
-            let containerClass = section.isVertical ? 'slider-container vertical-slider' : 'slider-container';
+
+            let containerClass = section.isVertical
+              ? 'slider-container vertical-slider'
+              : 'slider-container';
+
             sliderHTML = `
               <div class="${containerClass}">
                 <div class="slider-wrapper">
-                  ${section.sliderImages.map(img => `<img src="${img}" loading="lazy" decoding="async" alt="Preview Image">`).join('')}
+                  ${section.sliderImages
+                    .map(img => `<img src="${img}" loading="lazy" decoding="async" alt="Preview Image">`)
+                    .join('')}
                 </div>
               </div>
             `;
@@ -1392,132 +1723,247 @@
 
           sectionsHTML += `
             <h2>${section.title}</h2>
+
             ${sliderHTML}
+
             <p>${section.description}</p>
+
             ${section.links.map(link => {
+
               const customClass = link.customClass || '';
+
               if (link.isDownload) {
-                return `<a href="javascript:void(0)" onclick="openTaskPopup('${link.url}')" class="btn ${customClass}">${link.text}</a>`;
+
+                return `
+                  <a 
+                    href="javascript:void(0)" 
+                    onclick="openTaskPopup('${link.url}')" 
+                    class="btn ${customClass}"
+                  >
+                    ${link.text}
+                  </a>
+                `;
+
               } else {
-                return `<a href="${link.url}" class="btn ${customClass}" target="_blank">${link.text}</a>`;
+
+                return `
+                  <a 
+                    href="${link.url}" 
+                    class="btn ${customClass}" 
+                    target="_blank"
+                  >
+                    ${link.text}
+                  </a>
+                `;
+
               }
+
             }).join('')}
+
             ${section.footerHtml ? section.footerHtml : ''}
+
             ${index < game.sections.length - 1 ? '<hr>' : ''}
           `;
         });
+
         detail.innerHTML = sectionsHTML;
         detailsContainer.appendChild(detail);
       });
 
-      // Khởi tạo trượt ảnh tự động
       document.querySelectorAll('.slider-container').forEach(container => {
+
         const wrapper = container.querySelector('.slider-wrapper');
         const images = wrapper.querySelectorAll('img');
+
         if (images.length > 1) {
+
           let index = 0;
+
           const interval = setInterval(() => {
+
             index = (index + 1) % images.length;
-            wrapper.style.transform = `translateX(-${index * 100}%)`;
+
+            wrapper.style.transform =
+              `translateX(-${index * 100}%)`;
+
           }, 2500);
+
           sliderIntervals.push(interval);
         }
       });
     }
 
     function toggleGame(gameId, card) {
+
       const current = document.getElementById(`details-${gameId}`);
-      const isVisible = current ? current.classList.contains('show') : false;
+
+      const isVisible = current
+        ? current.classList.contains('show')
+        : false;
 
       document.querySelectorAll('.game-details').forEach(detail => {
         detail.classList.remove('show');
         detail.style.display = 'none';
       });
 
-      document.querySelectorAll('.game-card').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.game-card').forEach(c => {
+        c.classList.remove('active');
+      });
 
       if (!isVisible && current) {
+
         current.style.display = 'block';
-        setTimeout(() => current.classList.add('show'), 10);
-        card.classList.add('active');
-        
+
         setTimeout(() => {
-          current.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          current.classList.add('show');
+        }, 10);
+
+        card.classList.add('active');
+
+        setTimeout(() => {
+          current.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest'
+          });
         }, 100);
       }
     }
-   
-    /* ===============================
-       POPUP NHIỆM VỤ TẢI
-       =============================== */
+
     let completedTasks = new Set();
     let currentDownloadUrl = '';
 
     function openTaskPopup(url) {
+
       currentDownloadUrl = url;
+
       completedTasks.clear();
+
       updateTaskUI();
-      
+
       const popup = document.getElementById('task-popup');
+
       popup.style.display = 'flex';
-      setTimeout(() => popup.classList.add('show'), 10);
+
+      setTimeout(() => {
+        popup.classList.add('show');
+      }, 10);
     }
 
     function closeTaskPopup() {
+
       const popup = document.getElementById('task-popup');
+
       popup.classList.remove('show');
-      setTimeout(() => popup.style.display = 'none', 300);
+
+      setTimeout(() => {
+        popup.style.display = 'none';
+      }, 300);
     }
 
     function completeTask(taskId) {
+
       completedTasks.add(taskId);
+
       updateTaskUI();
     }
 
     function updateTaskUI() {
+
       const count = completedTasks.size;
-      const statusEl = document.getElementById('task-count');
-      const unlockBtn = document.getElementById('unlock-btn');
+
+      const statusEl =
+        document.getElementById('task-count');
+
+      const unlockBtn =
+        document.getElementById('unlock-btn');
       
       if (count < 1) {
-        statusEl.innerHTML = `🔒 Đã Khóa (${count}/1)`;
-        statusEl.style.color = '#ef4444';
-        unlockBtn.classList.add('unlock-btn-disabled');
-        unlockBtn.classList.remove('unlock-btn-active');
+
+        statusEl.innerHTML =
+          `🔒 Đã Khóa (${count}/1)`;
+
+        statusEl.style.color =
+          '#ef4444';
+
+        unlockBtn.classList.add(
+          'unlock-btn-disabled'
+        );
+
+        unlockBtn.classList.remove(
+          'unlock-btn-active'
+        );
+
         unlockBtn.disabled = true;
+
       } else {
-        statusEl.innerHTML = `🔓 Đã Mở Khóa Thành Công`;
-        statusEl.style.color = '#10b981';
-        unlockBtn.classList.remove('unlock-btn-disabled');
-        unlockBtn.classList.add('unlock-btn-active');
+
+        statusEl.innerHTML =
+          `🔓 Đã Mở Khóa Thành Công`;
+
+        statusEl.style.color =
+          '#10b981';
+
+        unlockBtn.classList.remove(
+          'unlock-btn-disabled'
+        );
+
+        unlockBtn.classList.add(
+          'unlock-btn-active'
+        );
+
         unlockBtn.disabled = false;
       }
     }
 
     function downloadFile() {
-      if (completedTasks.size >= 1 && currentDownloadUrl) {
-         window.open(currentDownloadUrl, '_blank');
-         closeTaskPopup();
+
+      if (
+        completedTasks.size >= 1 &&
+        currentDownloadUrl
+      ) {
+
+        window.open(
+          currentDownloadUrl,
+          '_blank'
+        );
+
+        closeTaskPopup();
       }
     }
 
     function closePopup() {
-      const popup = document.getElementById('popup');
+
+      const popup =
+        document.getElementById('popup');
+
       popup.classList.remove('show');
+
       setTimeout(() => {
+
         popup.style.display = 'none';
+
       }, 300);
     }
-   
-    document.getElementById('popup').addEventListener('click', function(e) {
-      if (e.target === this) closePopup();
-    });
-    
-    document.getElementById('task-popup').addEventListener('click', function(e) {
-      if (e.target === this) closeTaskPopup();
-    });
 
-  </script>
+    document
+      .getElementById('popup')
+      .addEventListener('click', function(e) {
+
+        if (e.target === this)
+          closePopup();
+
+      });
+    
+    document
+      .getElementById('task-popup')
+      .addEventListener('click', function(e) {
+
+        if (e.target === this)
+          closeTaskPopup();
+
+      });
+
+  </script> 
  </body>
-</html>
+ </html>
 
